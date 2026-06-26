@@ -1,34 +1,38 @@
 # 🐹 Whack a Mole
 
-**Whack a Mole** est un petit jeu d’arcade développé avec **Unity**, inspiré du célèbre jeu de la taupe.
-Le principe est simple : des taupes apparaissent aléatoirement dans leurs trous, et le joueur doit les frapper le plus rapidement possible pour marquer un maximum de points.
+**Whack a Mole** est un jeu d’arcade 2D développé avec **Unity**.
+Le joueur doit frapper les taupes lorsqu’elles sortent de leurs trous afin de marquer un maximum de points avant la fin de la partie.
 
 ---
 
-## 🎮 Aperçu du jeu
+## 🎮 Présentation
 
-Le jeu propose une ambiance cartoon, colorée et simple à comprendre, idéale pour un projet Unity débutant ou une démonstration pédagogique.
+Le jeu reprend le principe classique du **Whack-a-Mole** dans une ambiance cartoon, colorée et accessible.
 
-### Objectif
+Le gameplay est volontairement simple :
 
-* Cliquer sur les taupes lorsqu’elles sortent
-* Marquer des points
-* Éviter de rater trop d’apparitions
-* Faire le meilleur score possible avant la fin de la partie
+* une taupe apparaît
+* le joueur clique dessus
+* le score augmente
+* la taupe redescend
+* une nouvelle taupe apparaît
+
+Ce projet est idéal pour apprendre les bases d’un jeu 2D avec Unity.
 
 ---
 
 ## 🧩 Fonctionnalités
 
-* Apparition aléatoire des taupes
-* Animation montée / descente
+* Apparition des taupes
+* Animation de montée et de descente
 * Détection du clic joueur
-* Changement de sprite quand la taupe est touchée
+* Changement de sprite lorsque la taupe est frappée
 * Gestion du score
-* Écran de menu
+* Interface utilisateur simple
+* Menu principal
 * Écran Game Over
-* Interface simple et lisible
-* Graphismes cartoon adaptés à un jeu casual
+* Assets graphiques 2D au style cartoon
+* Sprites avec transparence
 
 ---
 
@@ -36,9 +40,10 @@ Le jeu propose une ambiance cartoon, colorée et simple à comprendre, idéale p
 
 * **Unity**
 * **C#**
-* **Sprites 2D**
-* **Animator Unity**
+* **2D Sprite Renderer**
+* **Animator**
 * **UI Unity**
+* **Coroutines**
 
 ---
 
@@ -62,80 +67,93 @@ Assets/
 
 ### Mole.cs
 
-Gère le comportement d’une taupe :
+Script responsable du comportement d’une taupe.
 
-* Lancement de l’animation
-* Activation du clic
-* Désactivation du clic
-* Changement de sprite quand la taupe est frappée
+Il gère :
 
-### GameManager.cs
-
-Gère la logique globale du jeu :
-
-* Score
-* Temps de jeu
-* Lancement des vagues
-* Fin de partie
-
-### UIManager.cs
-
-Gère l’interface :
-
-* Affichage du score
-* Affichage du timer
-* Menu principal
-* Écran Game Over
+* l’animation de sortie
+* l’animation de rentrée
+* l’autorisation du clic
+* le changement de sprite quand la taupe est touchée
 
 ---
 
-## 🚀 Lancer le projet
+### GameManager.cs
 
-1. Cloner le dépôt :
+Script responsable de la logique principale du jeu.
+
+Il peut gérer :
+
+* le score
+* le temps de jeu
+* le déclenchement des taupes
+* la fin de partie
+* le passage à l’écran Game Over
+
+---
+
+### UIManager.cs
+
+Script responsable de l’affichage de l’interface.
+
+Il peut gérer :
+
+* le score affiché à l’écran
+* le timer
+* les boutons du menu
+* l’écran de fin de partie
+
+---
+
+## 🚀 Installation
+
+Cloner le dépôt :
 
 ```bash
-git clone https://github.com/ton-compte/whack-a-mole.git
+git clone https://github.com/jpparein/Wack-a-mole.git
 ```
 
-2. Ouvrir le projet avec **Unity Hub**
+Ouvrir ensuite le projet avec **Unity Hub**.
 
-3. Charger la scène principale :
+---
 
-```txt
-Assets/_Project/Scenes/Menu.unity
-```
+## ▶️ Lancer le jeu
 
-4. Cliquer sur **Play**
+1. Ouvrir le projet dans Unity
+2. Charger la scène principale
+3. Cliquer sur **Play**
+4. Frapper les taupes dès qu’elles apparaissent
 
 ---
 
 ## 🖼️ Assets graphiques
 
-Le jeu utilise des sprites 2D avec transparence :
+Le projet utilise des assets 2D au style cartoon :
 
-* Logo du jeu
-* Boutons bois
-* Marteau
-* Taupes
-* Background
-* Sprite Game Over
+* logo du jeu
+* background
+* taupes
+* marteau
+* boutons en bois
+* sprite Game Over
+* éléments de décor
 
-Les visuels sont pensés pour garder un style homogène :
-bois, terre, couleurs chaudes, contour cartoon et rendu arcade.
+Le style graphique repose sur des couleurs chaudes, avec un mélange de bois, terre, ombres cartoon et contours épais.
 
 ---
 
 ## 📌 Objectif pédagogique
 
-Ce projet peut servir de base pour apprendre :
+Ce projet permet de travailler plusieurs notions importantes dans Unity :
 
-* Les bases d’un jeu 2D Unity
-* Les collisions / clics souris
-* Les coroutines
-* Les animations avec Animator
-* La gestion d’un score
-* La création d’une interface simple
-* L’organisation propre d’un projet Unity
+* création d’un jeu 2D simple
+* utilisation des sprites
+* gestion des animations
+* utilisation des coroutines
+* détection du clic souris
+* gestion d’un score
+* création d’une interface utilisateur
+* organisation propre d’un projet Unity
 
 ---
 
@@ -144,15 +162,16 @@ Ce projet peut servir de base pour apprendre :
 * Ajouter plusieurs types de taupes
 * Ajouter des bonus
 * Ajouter des malus
-* Ajouter un système de niveaux
 * Ajouter une difficulté progressive
-* Ajouter des sons et musiques
+* Ajouter un timer
+* Ajouter des sons
+* Ajouter une musique de fond
 * Ajouter un classement des meilleurs scores
-* Ajouter une version WebGL
+* Ajouter une version WebGL jouable dans le navigateur
 
 ---
 
-## 📦 Build
+## 📦 Plateformes possibles
 
 Le projet peut être exporté vers :
 
@@ -173,4 +192,4 @@ Projet réalisé à des fins pédagogiques et démonstratives.
 ## 👤 Auteur
 
 Développé par **Jean-Philippe Parein**
-Projet Unity 2D — Whack a Mole
+Projet Unity 2D — **Whack a Mole**
