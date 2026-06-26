@@ -110,7 +110,7 @@ Il peut gérer :
 Cloner le dépôt :
 
 ```bash
-git clone https://github.com/jpparein/Wack-a-mole.git
+git clone https://github.com/jpparein/Whack-a-mole.git
 ```
 
 Ouvrir ensuite le projet avec **Unity Hub**.
