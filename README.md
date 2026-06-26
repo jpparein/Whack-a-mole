@@ -1,4 +1,4 @@
-# 🐹 Whack a Mole
+#Whack a Mole
 
 **Whack a Mole** est un jeu d’arcade 2D développé avec **Unity**.
 Le joueur doit frapper les taupes lorsqu’elles sortent de leurs trous afin de marquer un maximum de points avant la fin de la partie.
